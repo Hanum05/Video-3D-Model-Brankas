@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemutar Video</title>
+    <style>
+        /* Mengatur tampilan dasar halaman */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212; /* Warna latar belakang gelap */
+            font-family: sans-serif;
+        }
 
+        /* Mengatur wadah video agar responsif */
+        .video-container {
+            width: 100%;
+            max-width: 800px; /* Lebar maksimal video */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Mengatur elemen video itu sendiri */
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px; /* Membuat sudut video agak membulat */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Memberikan efek bayangan */
+            background-color: #000; /* Warna latar belakang saat video belum dimuat */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <!-- Elemen video dengan kontrol pemutaran, putar otomatis, berulang, dan dibisukan -->
+        <video controls autoplay loop muted>
+            <!-- Pastikan file video.mp4 berada di folder yang sama dengan index.html ini -->
+            <source src="video.mp4" type="video/mp4">
+            
+            <!-- Pesan ini akan muncul jika browser tidak mendukung tag video HTML5 -->
+            Maaf, browser Anda tidak mendukung pemutaran video HTML5.
+        </video>
+    </div>
+
+</body>
+</html>
